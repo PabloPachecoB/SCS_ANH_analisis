@@ -1,0 +1,31 @@
+.calendar-container {
+    padding: 20px;
+  }
+  
+  .event-inputs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .event-inputs input,
+  .event-inputs button {
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  .event-inputs input {
+    flex: 1;
+  }
+  
+  .event-inputs button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .event-inputs button:hover {
+    background-color: #0056b3;
+  }
+  

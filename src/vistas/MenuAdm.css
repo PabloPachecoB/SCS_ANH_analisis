@@ -1,0 +1,158 @@
+.menu-container {
+    height: 100vh;
+    display: flex;
+  }
+  
+  .sidebar {
+    width: 250px; /* Ajusta el ancho según sea necesario */
+    height: 100%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #f8f9fa; /* Fondo claro */
+  }
+  
+  .logo-container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .logo-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+  
+  .nav-links {
+    flex-grow: 1;
+    padding-left: 0;
+  }
+  
+  .nav-links .nav-link {
+    padding: 10px 20px;
+    color: #333;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-links .nav-link:hover {
+    color: #007bff;
+  }
+  
+  .nav-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+  }
+  
+  .main-content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+  }
+  
+  .header {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .content {
+    margin-top: 20px;
+  }
+  
+  .card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  .card-title {
+    margin-bottom: 20px;
+  }
+  
+  .animated-text {
+    background: linear-gradient(90deg, #00ff00, #00cc00, #009900, #006600, #003300);
+    background-size: 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: colorChange 3s infinite;
+  }
+  
+  @keyframes colorChange {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  .chart-container {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .bar-chart {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    width: 90%; /* Ajusta el ancho para que no se salga de la pantalla */
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .bar {
+    width: 25%; /* Ajusta el ancho de cada barra */
+    background-color: #36A2EB;
+    border-radius: 5px;
+    position: relative;
+    animation: growBar 2s ease-in-out infinite alternate;
+  }
+  
+  .bar-label {
+    position: absolute;
+    bottom: 100%;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    transform: translateY(-100%);
+  }
+  
+  @keyframes growBar {
+    0% { height: 20%; }
+    100% { height: 80%; }
+  }
+  
+  .doughnut-chart {
+    position: relative;
+    width: 180px; /* Ajusta el tamaño del gráfico de dona */
+    height: 180px; /* Ajusta el tamaño del gráfico de dona */
+    border-radius: 50%;
+    background: conic-gradient(
+      #FF6384 0% 30%,
+      #36A2EB 30% 60%,
+      #FFCE56 60% 100%
+    );
+    animation: rotateDoughnut 4s linear infinite;
+  }
+  
+  .doughnut-chart::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80px; /* Ajusta el tamaño del centro del gráfico de dona */
+    height: 80px;
+    background-color: #fff;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  @keyframes rotateDoughnut {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
